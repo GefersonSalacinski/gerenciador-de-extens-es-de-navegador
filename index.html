@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Extensões</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+  <header>
+    <h1>Gerenciador de Extensões</h1>
+  </header>
+  <main>
+    <section class="search-and-filters">
+      <div class="search-container">
+        <!-- Barra de busca com rótulo associado -->
+        <label for="search-bar" class="visually-hidden">Pesquisar extensões:</label>
+        <input type="text" id="search-bar" placeholder="Pesquisar extensões..." />
+
+        <!-- Alternância de tema claro e escuro -->
+        <div class="theme-toggle">
+          <label for="theme-toggle" class="visually-hidden">Alternar entre tema claro e escuro:</label>
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Botões de filtro com rótulos -->
+      <div class="filters">
+        <button data-filter="all" class="filter-button active">Todos</button>
+        <button data-filter="active" class="filter-button">Ativos</button>
+        <button data-filter="inactive" class="filter-button">Inativos</button>
+      </div>
+    </section>
+    <section class="extensions-list">
+      <!-- Extensões serão renderizadas dinamicamente -->
+    </section>
+  </main>
+  
+  <!-- Modal de confirmação -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <p>Tem certeza de que deseja remover esta extensão?</p>
+      <button id="confirm-btn">Sim</button>
+      <button id="cancel-btn">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- Espaço para feedback -->
+  <div id="feedback" class="feedback hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

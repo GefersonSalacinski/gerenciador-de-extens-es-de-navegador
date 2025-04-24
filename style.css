@@ -1,0 +1,229 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body.light-theme {
+    font-family: Arial, sans-serif;
+    background-color: #35335b;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body.dark-theme {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .search-and-filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    gap: 1rem;
+  }
+  
+  #search-bar {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  body.light-theme #search-bar {
+    background-color: #f0f0f0;
+    color: #000000;
+  }
+  
+  body.dark-theme #search-bar {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+  
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #6200ee;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+  
+  .filters {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .filter-button {
+    padding: 0.5rem 1rem;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .filter-button.active {
+    background-color: #d55959;
+  }
+  
+  .extensions-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .extension {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  body.light-theme .extension {
+    background-color: #f9f9f9;
+  }
+  
+  body.dark-theme .extension {
+    background-color: #1e1e1e;
+  }
+  
+  .extension img {
+    max-width: 100px;
+    margin-bottom: 1rem;
+  }
+  
+  .extension-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  button.remove-extension {
+    background-color: #ff5f5f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  button.remove-extension:hover {
+    background-color: #ff3a3a;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal.hidden {
+    display: none;
+  }
+  
+  .modal-content {
+    background: #ffffff;
+    color: #000000;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .feedback {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: none;
+  }
+  
+  .feedback.error {
+    background-color: #f44336;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }   
